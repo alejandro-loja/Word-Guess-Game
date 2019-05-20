@@ -1,6 +1,3 @@
-
-
-
 var j = 0;
 var word_bank = ['potato', 'orange', 'chicken', 'firefly', 'bread', 'chair'];
 var word_to_guess = word_bank[j];
@@ -41,8 +38,6 @@ function lesschance() {
         reset('LOST');
     }
 }
-
-
 
 document.onkeypress = function (event) {
     var word_to_guess = word_bank[j];
