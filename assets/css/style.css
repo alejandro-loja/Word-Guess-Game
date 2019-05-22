@@ -9,3 +9,14 @@ span{
 h5 {
     font-family: 'Rubik', sans-serif;
 }
+h1{
+    animation-name: ani-header;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ani-header {
+    from {color:#fff3e0 ;}
+    to {color: #f57c00;}
+}
