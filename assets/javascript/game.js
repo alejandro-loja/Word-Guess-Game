@@ -1,23 +1,29 @@
 var j = 0;
 var word_bank = ['potato', 'orange', 'chicken', 'firefly', 'bread', 'chair'];
 var word_to_guess = word_bank[j];
+// array of letter that are correct
 var good_letter = [];
+// array of letters that are incorrect
 var bad_letter = [];
-var dom_word = document.getElementById('word');
-var dom_badletter = document.getElementById('letters-chosen');
+// displays incorrect letters
+var dom_badletter = document.getElementById('incorrect-letters-chosen');
 var chances = 6;
 var tries;
 var print_word;
-var lettersChosen;
 
+//Prints out 
 function print() {
+    var dom_word = document.getElementById('current-word');
     var word_to_guess = word_bank[j];
     print_word = " ";
+    //For current word in word bank go through each letter and make a spot on the DOM.
     for (var i = 0; i < word_to_guess.length; i++) {
-
+        //
         if (good_letter.indexOf(word_to_guess[i]) > -1) {
+            //If letter chosen is on the ...
             print_word += " " + word_to_guess[i] + " ";
         } else {
+            // If letter not guessed yet then print blank
             dom_word.textContent = print_word;
             print_word += " _ ";
         }
